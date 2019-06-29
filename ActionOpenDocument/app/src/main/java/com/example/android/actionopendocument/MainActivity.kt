@@ -24,6 +24,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -104,6 +105,8 @@ class MainActivity : AppCompatActivity() {
                     documentUri,
                     Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
+
+                Log.i(TAG, "Open Document " + documentUri)
                 openDocument(documentUri)
             }
         }
